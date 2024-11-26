@@ -1,0 +1,20 @@
+﻿
+Plans plans = new Plans();
+Functions.ShowForm(TabProduct, plans);
+
+private void ChangeButtonIcon(Button button, bool isPanelVisible, Image iconUp, Image iconDown)
+{
+
+    // Cambia la imagen del botón según la visibilidad del panel
+    if (isPanelVisible)
+    {
+        button.Image = iconUp;
+    }
+    else
+    {
+        button.Image = iconDown;
+    }
+}
+
+PnDropdownMenu.Visible = !PnDropdownMenu.Visible;
+ChangeButtonIcon(button1, PnDropdownMenu.Visible, Resources.chevron_up, Resources.chevron_down);
